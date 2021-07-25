@@ -1,0 +1,36 @@
+{
+  "name": "test-node-jm",
+  "version": "1.0.0",
+  "description": "Test for fun - node evaluation",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "env TZ='America/Lima' node ./src/index",
+    "dev-start": "env NODE_ENV=development env TZ='America/Lima' node ./src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-JM/test-node-jm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mk-JM/test-node-jm/issues"
+  },
+  "homepage": "https://github.com/mk-JM/test-node-jm#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.13.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier --write"
+    ]
+  }
+}

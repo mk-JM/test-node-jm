@@ -33,9 +33,9 @@ app.use(function (err, req, res, next) {
 // mongoose.connect(`mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}`);
 mongoose.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`);
 
-const port = process.env.PORT || '3005';
+const port = process.env.APP_PORT || '3005';
 app.set('port', port);
 
 const server = http.createServer(app);
-
+server.listen(port);
 module.exports = app;
